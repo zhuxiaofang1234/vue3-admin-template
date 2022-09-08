@@ -1,11 +1,11 @@
-
 <template>
   <div>
     <router-view></router-view>
   </div>
 </template>
 <script setup lang="ts">
-  </script>
+const obj = { a: "123" };
+</script>
 
 <style scoped>
 .logo {

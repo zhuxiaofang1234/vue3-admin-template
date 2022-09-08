@@ -4,12 +4,10 @@ import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 
 // elementplus相关包
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import { UserConfigExport, ConfigEnv } from 'vite'
-import { viteMockServe } from 'vite-plugin-mock'
-
-
+import Components from "unplugin-vue-components/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import { UserConfigExport, ConfigEnv } from "vite";
+import { viteMockServe } from "vite-plugin-mock";
 
 import path from "path";
 
@@ -31,8 +29,8 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       }),
       viteMockServe({
         // default
-        mockPath: 'mock',
-        localEnabled: command === 'serve',
+        mockPath: "mock",
+        localEnabled: command === "serve",
       }),
     ],
     resolve: {
@@ -42,5 +40,5 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         coms: path.resolve(__dirname, "src/components"),
       },
     },
-  }
-}
+  };
+};
